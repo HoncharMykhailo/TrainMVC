@@ -56,7 +56,6 @@ namespace TrainInfrastructure.Controllers
         public IActionResult Create(int stationId)
         {
             // ViewData["StationId"] = new SelectList(_context.Stations, "Id", "Name");
-
             ViewBag.StationId = stationId;
             ViewBag.StationName = _context.Stations.Where(s => s.Id == stationId).FirstOrDefault().Name;
             return View();
@@ -70,7 +69,8 @@ namespace TrainInfrastructure.Controllers
         public async Task<IActionResult> Create(int stationId, [Bind("Id,Model,Power,StationId")] Train train)
         {
             train.StationId = stationId;
-            Station station = _context.Stations.FirstOrDefault(s=>s.Id==stationId);
+            //Station station = _context.Stations.FirstOrDefault(s=>s.Id==stationId);
+            Station station = _context.Stations.Include(s=>s.City).FirstOrDefault(s => s.Id == stationId);
             train.Station = station;
             ModelState.Clear();
             TryValidateModel(train);
