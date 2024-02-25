@@ -72,6 +72,7 @@ namespace TrainInfrastructure.Controllers
         public async Task<IActionResult> Create(int cityId, [Bind("Id,CityId,Name,Phone")] Station station)
         {
             station.CityId = cityId;
+
             City city=_context.Cities.FirstOrDefault(c=> c.Id == cityId);
             station.City = city;
             ModelState.Clear();

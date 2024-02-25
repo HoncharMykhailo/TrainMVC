@@ -49,7 +49,8 @@ namespace TrainInfrastructure.Controllers
                 return NotFound();
             }
 
-            return View(train);
+            //return View(train);
+            return RedirectToAction("Index", "Drivers", new { id =train.Id,model=train.Model});
         }
 
         // GET: Trains/Create
@@ -68,12 +69,13 @@ namespace TrainInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(int stationId, [Bind("Id,Model,Power,StationId")] Train train)
         {
+
             train.StationId = stationId;
-            //Station station = _context.Stations.FirstOrDefault(s=>s.Id==stationId);
             Station station = _context.Stations.Include(s=>s.City).FirstOrDefault(s => s.Id == stationId);
             train.Station = station;
             ModelState.Clear();
             TryValidateModel(train);
+
             if (ModelState.IsValid)
             {
                 _context.Add(train);
