@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainDomain", "TrainDomain\TrainDomain.csproj", "{13FCEE17-F93A-4640-A1E8-871188D5564C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainInfrastructure", "TrainInfrastructure\TrainInfrastructure.csproj", "{717718A4-4285-4BAD-9801-B15E6D135191}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13FCEE17-F93A-4640-A1E8-871188D5564C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FCEE17-F93A-4640-A1E8-871188D5564C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FCEE17-F93A-4640-A1E8-871188D5564C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FCEE17-F93A-4640-A1E8-871188D5564C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717718A4-4285-4BAD-9801-B15E6D135191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717718A4-4285-4BAD-9801-B15E6D135191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717718A4-4285-4BAD-9801-B15E6D135191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717718A4-4285-4BAD-9801-B15E6D135191}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5ED99DD5-A3B9-411D-8A8A-63B067C87CD9}
+	EndGlobalSection
+EndGlobal
